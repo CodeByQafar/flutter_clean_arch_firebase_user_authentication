@@ -1,4 +1,3 @@
-import '../../../../core/init/theme/app_colors.dart';
 import '../../../../core/init/lang/languages.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +11,9 @@ class TitleText extends StatelessWidget {
         children: <TextSpan>[
           TextSpan(
             text: Language.introductionScreenTitle[0],
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(color: AppColors.cyanBlueAzure),
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
           TextSpan(
             text: Language.introductionScreenTitle.substring(1),

@@ -1,4 +1,4 @@
-part of 'app_router.dart';
+part of 'router.dart';
 
 class FadeRoute<T> extends PageRouteBuilder<T> {
   final Widget child;

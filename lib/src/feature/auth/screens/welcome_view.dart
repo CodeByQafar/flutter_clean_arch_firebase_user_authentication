@@ -1,5 +1,5 @@
 import '../../../core/init/lang/languages.dart';
-import '../../../core/router/app_router.dart';
+import '../../../core/router/router.dart';
 import '../widgets/buttons/signin_button.dart';
 import '../widgets/buttons/signup_button.dart';
 import '../widgets/containers/background_image.dart';
@@ -15,6 +15,7 @@ class WelcomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      extendBodyBehindAppBar: true,
       body: BackgroundImage(
         child: Column(
           children: [

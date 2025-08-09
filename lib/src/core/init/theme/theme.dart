@@ -1,13 +1,27 @@
-import '../../../core/init/theme/app_colors.dart';
+import 'colors.dart';
 import 'package:flutter/material.dart';
 import '../../../../gen/fonts.gen.dart';
 
 class AppTheme {
   ThemeData get theme => ThemeData(
+    primaryColor: AppColors.cyanBlueAzure,
     primarySwatch: AppColors.cyanBlueAzure,
+
     brightness: Brightness.light,
     appBarTheme: _appBarTheme(),
     textTheme: _texttheme(),
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    // buttonTheme: ButtonThemeData(
+    //   hoverColor: Colors.transparent,
+    //   splashColor: Colors.transparent,
+    //   highlightColor: Colors.transparent,
+    //   buttonColor: AppColors.cyanBlueAzure,
+    // ),
+    colorScheme: ColorScheme.fromSwatch(
+      primarySwatch: AppColors.cyanBlueAzure,
+    ).copyWith(onSecondary: Colors.black54),
+    iconTheme: IconThemeData(color: Colors.white),
   );
 
   AppBarTheme _appBarTheme() {
@@ -30,12 +44,23 @@ class AppTheme {
         fontFamily: FontFamily.bebasNeue,
       ),
       titleMedium: TextStyle(
+        fontSize: 49.0,
+        fontFamily: FontFamily.smoochSans,
+        fontWeight: FontWeight.w700,
+        color: AppColors.cyanBlueAzure,
+      ),
+
+      bodyLarge: TextStyle(
         fontSize: 30.0,
         fontFamily: FontFamily.smoochSans,
         fontWeight: FontWeight.w700,
         color: Colors.white,
       ),
-      bodyMedium: TextStyle(fontSize: 16.0, color: Colors.white),
+      bodyMedium: TextStyle(
+        fontSize: 22.0,
+        color: Colors.black,
+        fontFamily: FontFamily.smoochSans,
+      ),
       bodySmall: TextStyle(
         fontSize: 20.0,
         color: Colors.white,

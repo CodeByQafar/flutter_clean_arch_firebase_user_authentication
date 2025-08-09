@@ -1,4 +1,3 @@
-import '../../../../core/init/theme/app_colors.dart';
 import '../../../../core/utility/border_radius.dart';
 import '../../../../core/utility/padding.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +19,9 @@ class SignUpButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: Theme.of(
-              context,
-            ).textTheme.titleMedium?.copyWith(color: AppColors.cyanBlueAzure),
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
         ),
       ),

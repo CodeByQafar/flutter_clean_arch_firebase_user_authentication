@@ -1,3 +1,5 @@
+import '../auth/screens/signin_view.dart';
+import '../auth/screens/signup_view.dart';
 import '../auth/screens/welcome_view.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +8,6 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WelcomeView();
+    return SignupView();
   }
 }
