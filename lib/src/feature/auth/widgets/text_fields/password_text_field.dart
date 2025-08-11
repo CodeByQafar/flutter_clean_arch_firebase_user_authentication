@@ -39,10 +39,11 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
         cursorColor: Theme.of(context).primaryColor,
         autocorrect: true,
         onChanged: (value) {},
-
+        style: Theme.of(context).textTheme.bodyMedium,
         scrollPhysics: BouncingScrollPhysics(),
         textInputAction: TextInputAction.next,
         obscureText: !isVisible,
+        obscuringCharacter: '*',
         decoration: InputDecoration(
           suffix: AnimatedCrossFade(
             crossFadeState: crossFadeState(),
@@ -64,9 +65,17 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
             duration: Durations.medium,
           ),
 
+          prefixIconConstraints: BoxConstraints(minWidth: 0, minHeight: 0),
           contentPadding: Paddings.textFieldContentPadding,
           fillColor: Theme.of(context).primaryColor,
           focusColor: Theme.of(context).colorScheme.primary,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              style: BorderStyle.solid,
+              color: Theme.of(context).colorScheme.onSecondary,
+            ),
+            borderRadius: BorderRadiuses.textfieldRadius,
+          ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: Theme.of(context).colorScheme.onSecondary,
@@ -75,7 +84,9 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
           ),
           hintFadeDuration: Durations.long,
           hintText: widget.hintText,
-          hintStyle: Theme.of(context).textTheme.bodyMedium,
+          hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+            color: Theme.of(context).colorScheme.onSecondary,
+          ),
         ),
       ),
     );

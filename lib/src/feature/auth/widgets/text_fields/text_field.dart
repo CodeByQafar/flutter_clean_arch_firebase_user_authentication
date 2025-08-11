@@ -25,8 +25,16 @@ class CustomTextField extends StatelessWidget {
           contentPadding: Paddings.textFieldContentPadding,
           fillColor: Theme.of(context).primaryColor,
           focusColor: Theme.of(context).primaryColor,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              style: BorderStyle.solid,
+              color: Theme.of(context).colorScheme.onSecondary,
+            ),
+            borderRadius: BorderRadiuses.textfieldRadius,
+          ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
+              style: BorderStyle.solid,
               color: Theme.of(context).colorScheme.onSecondary,
             ),
             borderRadius: BorderRadiuses.textfieldRadius,

@@ -44,6 +44,7 @@ class SignupView extends StatelessWidget {
                         CustomPasswordTextField(
                           hintText: Language.passwordHint,
                         ),
+                        SizedBox(height: 100),
                       ],
                     ),
                   ),
