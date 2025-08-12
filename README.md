@@ -6,25 +6,32 @@ This app demonstrates a scalable and modular project structure ideal for real-wo
 The concept design was created in **Adobe XD**, and all UI/UX design work was done by myself:
 
 # Light Theme
-![Preview 1](screenshots/light-1.png)
-![Preview 2](screenshots/light-2.png)
-![Preview 3](screenshots/light-3.png)
-![Preview 4](screenshots/light-4.png)
-![Preview 5](screenshots/light-5.png)
-![Preview 6](screenshots/light-6.png)
-![Preview 7](screenshots/light-7.png)
+<div style="display: flex;">
+  <img src="screenshots/light-1.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-2.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-3.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-4.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-5.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-6.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/light-7.png" width="170">
+</div>
 
 # Dark Theme
-![Preview 8](screenshots/dark-1.png)
-![Preview 9](screenshots/dark-2.png)
-![Preview 10](screenshots/dark-3.png)
-![Preview 11](screenshots/dark-4.png)
-![Preview 12](screenshots/dark-5.png)
-![Preview 13](screenshots/dark-6.png)
-![Preview 14](screenshots/dark-7.png)
+<div style="display: flex; margin-top: 10px;">
+  <img src="screenshots/dark-1.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-2.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-3.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-4.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-5.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-6.png" width="170" style="margin-right: 5px;">
+  <img src="screenshots/dark-7.png" width="170">
+</div>
+
 
 # Routes 
-![Preview 15](screenshots/xd_prewiew_routes.png)
+   <div>
+     <img src="screenshots/xd_prewiew_routes.png" style="margin-right: 5px;">
+  </div>
 
 
 ## Installation
