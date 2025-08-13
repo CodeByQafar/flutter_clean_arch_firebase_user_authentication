@@ -13,4 +13,11 @@ class Language {
   static String fullNameHint = 'Enter Full Name';
   static String emailHint = 'Enter Email';
   static String passwordHint = 'Enter Password';
+  static String personalDataUsage =
+      "I agree to the processing of Personal data";
+  static String rememberMe = "Remember Me";
+  static String signUpButton = 'Sign Up';
+  static String signInButton = 'Sign In';
+  static String signInWith = 'Sign In with';
+  static String signUpWith = 'Sign Up with';
 }

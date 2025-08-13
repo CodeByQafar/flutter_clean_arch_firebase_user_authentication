@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' hide Durations;
 
 import '../../../../core/utility/duration.dart';
 import '../../../../core/utility/border_radius.dart';
+import '../../../../core/utility/icon_size.dart';
 import '../../../../core/utility/padding.dart';
 
 class CustomPasswordTextField extends StatefulWidget {
@@ -16,8 +17,6 @@ class CustomPasswordTextField extends StatefulWidget {
 class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
     with TickerProviderStateMixin {
   final double cursorHeight = 24.0;
-
-  GlobalKey key = GlobalKey();
   bool isVisible = false;
 
   CrossFadeState crossFadeState() {
@@ -41,31 +40,22 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
         onChanged: (value) {},
         style: Theme.of(context).textTheme.bodyMedium,
         scrollPhysics: BouncingScrollPhysics(),
+        keyboardType: TextInputType.visiblePassword,
         textInputAction: TextInputAction.next,
         obscureText: !isVisible,
-        obscuringCharacter: '*',
         decoration: InputDecoration(
-          suffix: AnimatedCrossFade(
-            crossFadeState: crossFadeState(),
-            firstChild: IconButton(
-              icon: Icon(
-                Icons.visibility_off,
-                color: Theme.of(context).colorScheme.onSecondary,
-              ),
-              onPressed: changeVisibility,
-            ),
-            secondChild: IconButton(
-              icon: Icon(
-                Icons.visibility,
-                color: Theme.of(context).colorScheme.onSecondary,
-              ),
-              onPressed: changeVisibility,
-            ),
+          suffixIcon: Padding(
+            padding: Paddings.textFieldIconPadding,
+            child: AnimatedCrossFade(
+              alignment: Alignment.centerLeft,
+              crossFadeState: crossFadeState(),
+              firstChild: _iconButton(context, Icons.visibility_off),
+              secondChild: _iconButton(context, Icons.visibility),
 
-            duration: Durations.medium,
+              duration: Durations.medium,
+            ),
           ),
 
-          prefixIconConstraints: BoxConstraints(minWidth: 0, minHeight: 0),
           contentPadding: Paddings.textFieldContentPadding,
           fillColor: Theme.of(context).primaryColor,
           focusColor: Theme.of(context).colorScheme.primary,
@@ -89,6 +79,20 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField>
           ),
         ),
       ),
+    );
+  }
+
+  IconButton _iconButton(BuildContext context, IconData icon) {
+    return IconButton(
+      hoverColor: Colors.transparent,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      icon: Icon(
+        icon,
+        size: IconSizes.textFieldIconSize,
+        color: Theme.of(context).colorScheme.onSecondary,
+      ),
+      onPressed: changeVisibility,
     );
   }
 }

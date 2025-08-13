@@ -10,17 +10,21 @@ class AppTheme {
     brightness: Brightness.light,
     appBarTheme: _appBarTheme(),
     textTheme: _texttheme(),
+
+    hoverColor: Colors.transparent,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
+
     // buttonTheme: ButtonThemeData(
     //   hoverColor: Colors.transparent,
     //   splashColor: Colors.transparent,
     //   highlightColor: Colors.transparent,
     //   buttonColor: AppColors.cyanBlueAzure,
     // ),
+    dividerColor: AppColors.quickSilver,
     colorScheme: ColorScheme.fromSwatch(
       primarySwatch: AppColors.cyanBlueAzure,
-    ).copyWith(onSecondary: Colors.black54),
+    ).copyWith(onSecondary: AppColors.quickSilver),
     iconTheme: IconThemeData(color: Colors.white),
   );
 
@@ -49,7 +53,12 @@ class AppTheme {
         fontWeight: FontWeight.w700,
         color: AppColors.cyanBlueAzure,
       ),
-
+      titleSmall: TextStyle(
+        fontSize: 20.0,
+        fontFamily: FontFamily.smoochSans,
+        fontWeight: FontWeight.w700,
+        color: AppColors.quickSilver,
+      ),
       bodyLarge: TextStyle(
         fontSize: 30.0,
         fontFamily: FontFamily.smoochSans,

@@ -5,9 +5,16 @@ import '../../../../core/utility/border_radius.dart';
 import '../../../../core/utility/padding.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.hintText});
+  const CustomTextField({
+    super.key,
+    required this.hintText,
+    required this.keyboardType,
+  });
+
   final double cursorHeight = 24.0;
   final String hintText;
+  final TextInputType keyboardType;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,6 +27,7 @@ class CustomTextField extends StatelessWidget {
 
         scrollPhysics: BouncingScrollPhysics(),
         textInputAction: TextInputAction.next,
+        keyboardType: keyboardType,
         style: Theme.of(context).textTheme.bodyMedium,
         decoration: InputDecoration(
           contentPadding: Paddings.textFieldContentPadding,
