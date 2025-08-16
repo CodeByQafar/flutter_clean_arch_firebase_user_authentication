@@ -6,8 +6,12 @@ class SignButton extends StatelessWidget {
   final String message;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FilledButton(
       onPressed: onPressed,
+      style: FilledButton.styleFrom(
+        elevation: 0.0,
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Text(message, style: Theme.of(context).textTheme.bodyLarge),

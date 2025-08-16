@@ -24,7 +24,7 @@ class _CustomCheckboxListTileState extends State<CustomCheckboxListTile> {
     return Padding(
       padding: Paddings.checkboxListTilePadding,
       child: CheckboxListTile(
-        controlAffinity: ListTileControlAffinity.trailing,
+        controlAffinity: ListTileControlAffinity.leading,
         title: Text(
           widget.message,
           style: Theme.of(context).textTheme.titleSmall,

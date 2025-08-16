@@ -25,5 +25,5 @@ class Paddings {
     bottom: 12.0,
   );
   static final EdgeInsets textFieldIconPadding = EdgeInsets.only(right: 8.0);
-  static final EdgeInsets checkboxListTilePadding = EdgeInsets.only(left: 15.0);
+  static final EdgeInsets checkboxListTilePadding = EdgeInsets.symmetric(horizontal: 25.0);
 }
