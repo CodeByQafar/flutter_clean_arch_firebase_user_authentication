@@ -14,9 +14,19 @@ import '../widgets/text_fields/password_text_field.dart';
 import '../widgets/text_fields/text_field.dart';
 import '../widgets/texts/sign_title.dart';
 
-class SignupView extends StatelessWidget {
+class SignupView extends StatefulWidget {
   const SignupView({super.key});
 
+  @override
+  State<SignupView> createState() => _SignupViewState();
+}
+
+class _SignupViewState extends State<SignupView> {
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,64 +41,68 @@ class SignupView extends StatelessWidget {
         child: Column(
           children: [
             const Spacer(),
-            Stack(
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadiuses.backgroundContainerRadius,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
               children: [
-                AnimatedPositioned(
-                  duration: Durations.long,
-                  curve: Curves.easeInOutExpo,
-
-                  child: Container(
-                    // duration: Durations.long,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadiuses.backgroundContainerRadius,
-                    ),
-                    child: Column(
+                SignTitleText(text: Language.signUpTitle),
+                Form(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
                     children: [
-                      SignTitleText(text: Language.signUpTitle),
-                      Form(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            CustomTextField(
-                              hintText: Language.fullNameHint,
-                              keyboardType: TextInputType.text,
-                            ),
-                            CustomTextField(
-                              hintText: Language.emailHint,
-                              keyboardType: TextInputType.emailAddress,
-                            ),
-                            CustomPasswordTextField(
-                              hintText: Language.passwordHint,
-                            ),
-                            CustomCheckboxListTile(
-                              message: Language.personalDataUsage,
-                              onChanged: (value) {
-                                return value;
-                              },
-                            ),
-                            SignButton(
-                              message: Language.signUpButton,
-                              onPressed: () {
-                  
-                              },
-                            ),
-                            DividerText(text: Language.signInButton),
-                            SizedBox(height: 100),
-                          ],
-                        ),
+                      CustomTextField(
+                        hintText: Language.fullNameHint,
+                        keyboardType: TextInputType.text,
                       ),
+                      CustomTextField(
+                        hintText: Language.emailHint,
+                        keyboardType: TextInputType.emailAddress,
+                      ),
+                      CustomPasswordTextField(
+                        hintText: Language.passwordHint,
+                      ),
+                      CustomCheckboxListTile(
+                        message: Language.personalDataUsage,
+                        onChanged: (value) {
+                          return value;
+                        },
+                      ),
+                      SignButton(
+                        message: Language.signUpButton,
+                        onPressed: () {
+                                  
+                        },
+                      ),
+                      DividerText(text: Language.signInWith),
+                     ConstrainedBox(
+                       constraints: BoxConstraints(
+                         maxWidth: 270,
+                       ),
+                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.apple, color: Colors.black,size: 40,)),
+                        ],
+                       ),
+                     ),
+                      SizedBox(height: 50),
                     ],
-                                      
                   ),
-                                ),
-                ),],
+                ),
+              ],                  
             ),
+          ),
           ],
         ),
       ),
     );
   }
-
 }
