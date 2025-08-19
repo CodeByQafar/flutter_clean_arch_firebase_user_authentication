@@ -1,4 +1,5 @@
 import 'package:clean_arch_firebase_user_authentication/src/core/init/lang/languages.dart';
+import 'package:clean_arch_firebase_user_authentication/src/feature/auth/widgets/buttons/signwidht_icon_buttons.dart';
 
 import '../../../core/utility/duration.dart';
 import '../../../core/utility/border_radius.dart';
@@ -14,19 +15,9 @@ import '../widgets/text_fields/password_text_field.dart';
 import '../widgets/text_fields/text_field.dart';
 import '../widgets/texts/sign_title.dart';
 
-class SignupView extends StatefulWidget {
+class SignupView extends StatelessWidget {
   const SignupView({super.key});
 
-  @override
-  State<SignupView> createState() => _SignupViewState();
-}
-
-class _SignupViewState extends State<SignupView> {
-  @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,15 +74,7 @@ class _SignupViewState extends State<SignupView> {
                        constraints: BoxConstraints(
                          maxWidth: 270,
                        ),
-                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
-                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
-                          IconButton(onPressed: (){}, icon: Icon(Icons.facebook, color: Colors.blue,size: 40,)),
-                          IconButton(onPressed: (){}, icon: Icon(Icons.apple, color: Colors.black,size: 40,)),
-                        ],
-                       ),
+                       child: SignWidthIcons(),
                      ),
                       SizedBox(height: 50),
                     ],
@@ -106,3 +89,4 @@ class _SignupViewState extends State<SignupView> {
     );
   }
 }
+

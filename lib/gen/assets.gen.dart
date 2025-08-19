@@ -67,6 +67,33 @@ class $AssetsFontsGen {
   ];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/apple_icon.png
+  AssetGenImage get appleIcon =>
+      const AssetGenImage('assets/icons/apple_icon.png');
+
+  /// File path: assets/icons/facebook_icon.png
+  AssetGenImage get facebookIcon =>
+      const AssetGenImage('assets/icons/facebook_icon.png');
+
+  /// File path: assets/icons/google_icon.png
+  AssetGenImage get googleIcon =>
+      const AssetGenImage('assets/icons/google_icon.png');
+
+  /// File path: assets/icons/x_icon.png
+  AssetGenImage get xIcon => const AssetGenImage('assets/icons/x_icon.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    appleIcon,
+    facebookIcon,
+    googleIcon,
+    xIcon,
+  ];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -82,6 +109,7 @@ class Assets {
   const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
