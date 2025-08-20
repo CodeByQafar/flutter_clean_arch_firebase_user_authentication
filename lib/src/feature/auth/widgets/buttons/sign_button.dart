@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/utility/border_radius.dart';
 import '../../../../core/utility/box_constraints.dart';
 import '../../../../core/utility/padding.dart';
 
@@ -14,10 +15,11 @@ class SignButton extends StatelessWidget {
       child: ConstrainedBox(
         constraints: BoxConstraintses.expandSignButton,
         child: FilledButton(
-          
+
           onPressed: onPressed,
           style: FilledButton.styleFrom(
             elevation: 0.0,
+            shape:BorderRadiuses.signBUttonRadius,
             backgroundColor: Theme.of(context).primaryColor,
           ),
           child: Text(message, style: Theme.of(context).textTheme.bodyLarge),

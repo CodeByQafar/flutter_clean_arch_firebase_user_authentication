@@ -1,10 +1,9 @@
 class Language {
+
   //welcome screen
   static String introductionScreenTitle = 'Welcome';
   static String introductionScreenSubtitle =
       'Enter personal details to your employee account';
-  static String introductionScreenSignup = 'Sign Up';
-  static String introductionScreenSignin = 'Sign In';
 
   //sign screen
   static String backButton = 'Back';
@@ -16,8 +15,12 @@ class Language {
   static String personalDataUsage =
       "I agree to the processing of Personal data";
   static String rememberMe = "Remember Me";
-  static String signUpButton = 'Sign Up';
-  static String signInButton = 'Sign In';
   static String signInWith = 'Sign In with';
   static String signUpWith = 'Sign Up with';
+  static String alredyHaveAccount='Already have an account?';
+
+//sign and welcome
+  static String signUp = 'Sign Up';
+  static String signIn = 'Sign In';
 }
+

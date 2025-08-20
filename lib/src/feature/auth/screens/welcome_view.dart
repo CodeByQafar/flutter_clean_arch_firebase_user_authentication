@@ -34,7 +34,7 @@ class WelcomeView extends StatelessWidget {
                         context,
                       ).push(AppRouter.generateRoute(RouteName.signin));
                     },
-                    text: Language.introductionScreenSignin,
+                    text: Language.signIn,
                   ),
                 ),
                 Expanded(
@@ -44,7 +44,7 @@ class WelcomeView extends StatelessWidget {
                         context,
                       ).push(AppRouter.generateRoute(RouteName.signup));
                     },
-                    text: Language.introductionScreenSignup,
+                    text: Language.signUp,
                   ),
                 ),
               ],

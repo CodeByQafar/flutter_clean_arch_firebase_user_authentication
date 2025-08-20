@@ -11,5 +11,8 @@ class BorderRadiuses {
     topRight: Radius.circular(66),
     topLeft: Radius.circular(66),
   );
-  static final textfieldRadius = BorderRadius.all(Radius.circular(34.0));
+  static final BorderRadius textfieldRadius = BorderRadius.all(Radius.circular(34.0));
+  static final RoundedRectangleBorder signBUttonRadius= RoundedRectangleBorder (
+      borderRadius: BorderRadius.circular(12)
+  );
 }

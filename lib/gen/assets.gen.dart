@@ -70,28 +70,20 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/apple_icon.png
-  AssetGenImage get appleIcon =>
-      const AssetGenImage('assets/icons/apple_icon.png');
+  /// File path: assets/icons/apple_icon.svg
+  String get appleIcon => 'assets/icons/apple_icon.svg';
 
-  /// File path: assets/icons/facebook_icon.png
-  AssetGenImage get facebookIcon =>
-      const AssetGenImage('assets/icons/facebook_icon.png');
+  /// File path: assets/icons/facebook_icon.svg
+  String get facebookIcon => 'assets/icons/facebook_icon.svg';
 
-  /// File path: assets/icons/google_icon.png
-  AssetGenImage get googleIcon =>
-      const AssetGenImage('assets/icons/google_icon.png');
+  /// File path: assets/icons/google_icon.svg
+  String get googleIcon => 'assets/icons/google_icon.svg';
 
-  /// File path: assets/icons/x_icon.png
-  AssetGenImage get xIcon => const AssetGenImage('assets/icons/x_icon.png');
+  /// File path: assets/icons/x__icon.svg
+  String get xIcon => 'assets/icons/x__icon.svg';
 
   /// List of all assets
-  List<AssetGenImage> get values => [
-    appleIcon,
-    facebookIcon,
-    googleIcon,
-    xIcon,
-  ];
+  List<String> get values => [appleIcon, facebookIcon, googleIcon, xIcon];
 }
 
 class $AssetsImagesGen {

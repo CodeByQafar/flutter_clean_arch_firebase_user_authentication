@@ -23,24 +23,27 @@ class _CustomCheckboxListTileState extends State<CustomCheckboxListTile> {
   Widget build(BuildContext context) {
     return Padding(
       padding: Paddings.checkboxListTilePadding,
-      child: CheckboxListTile(
-        controlAffinity: ListTileControlAffinity.leading,
-        title: Text(
-          widget.message,
-          style: Theme.of(context).textTheme.titleSmall,
-        ),
-        checkColor: Colors.white,
-        activeColor: AppColors.cyanBlueAzure,
-        contentPadding: EdgeInsets.zero,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Checkbox(
 
-        value: isChecked,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-        onChanged: (value) {
-          setState(() {
-            isChecked = !isChecked;
-          });
-          widget.onChanged.call(value ?? isChecked);
-        },
+            value: isChecked,
+            checkColor: Colors.white,
+            activeColor: AppColors.cyanBlueAzure,
+            onChanged: (value) {
+              setState(() {
+                isChecked = value ?? false;
+              });
+              widget.onChanged.call(value ?? false);
+            },
+          ),
+          Text(
+            widget.message,
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+        ],
       ),
     );
   }

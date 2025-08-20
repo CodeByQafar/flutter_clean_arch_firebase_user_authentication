@@ -13,6 +13,7 @@ import 'package:flutter/material.dart' hide Durations;
 import '../widgets/divider/divider_text.dart';
 import '../widgets/text_fields/password_text_field.dart';
 import '../widgets/text_fields/text_field.dart';
+import '../widgets/texts/custom_text_width_button.dart';
 import '../widgets/texts/sign_title.dart';
 
 class SignupView extends StatelessWidget {
@@ -28,65 +29,61 @@ class SignupView extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: BackNavigationButton(),
       ),
-      body: BackgroundImage(
-        child: Column(
-          children: [
-            const Spacer(),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadiuses.backgroundContainerRadius,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-              children: [
-                SignTitleText(text: Language.signUpTitle),
-                Form(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      CustomTextField(
-                        hintText: Language.fullNameHint,
-                        keyboardType: TextInputType.text,
-                      ),
-                      CustomTextField(
-                        hintText: Language.emailHint,
-                        keyboardType: TextInputType.emailAddress,
-                      ),
-                      CustomPasswordTextField(
-                        hintText: Language.passwordHint,
-                      ),
-                      CustomCheckboxListTile(
-                        message: Language.personalDataUsage,
-                        onChanged: (value) {
-                          return value;
-                        },
-                      ),
-                      SignButton(
-                        message: Language.signUpButton,
-                        onPressed: () {
-                                  
-                        },
-                      ),
-                      DividerText(text: Language.signInWith),
-                     ConstrainedBox(
-                       constraints: BoxConstraints(
-                         maxWidth: 270,
-                       ),
-                       child: SignWidthIcons(),
-                     ),
-                      SizedBox(height: 50),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: BackgroundImage(
+          child: Column(
+            children: [
+              const Spacer(),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadiuses.backgroundContainerRadius,
                 ),
-              ],                  
-            ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    SignTitleText(text: Language.signUpTitle),
+                    Form(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CustomTextField(
+                            hintText: Language.fullNameHint,
+                            keyboardType: TextInputType.text,
+                          ),
+                          CustomTextField(
+                            hintText: Language.emailHint,
+                            keyboardType: TextInputType.emailAddress,
+                          ),
+                          CustomPasswordTextField(
+                            hintText: Language.passwordHint,
+                          ),
+                          CustomCheckboxListTile(
+                            message: Language.personalDataUsage,
+                            onChanged: (value) {
+                              return value;
+                            },
+                          ),
+                          SignButton(message: Language.signUp, onPressed: () {}),
+                          DividerText(text: Language.signInWith),
+                          SignWidthIcons(),
+        
+                          TextWidthButton(
+                            text: Language.alredyHaveAccount,
+                            buttonText: Language.signIn,
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-          ],
         ),
       ),
     );
   }
 }
-
