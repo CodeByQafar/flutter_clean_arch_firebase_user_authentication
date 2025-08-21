@@ -24,26 +24,40 @@ dependencies:
   #theme
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.1.6
+  flutter_native_splash: ^2.4.6
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
- 
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
+
   build_runner:
   flutter_gen_runner:
+
+flutter_native_splash:
+  color: "#1592e6"
+  image: assets/images/app_icon_backgoundles.png
+  android: true
+  ios: true
+  web: false
 
 flutter:
 
 
   uses-material-design: true
   assets:
+
     - assets/images/
-    - assets/icons/
     - assets/fonts/
-    # - assets/languages/ 
+
+     #icons
+    - assets/icons/facebook_icon.svg
+    - assets/icons/google_icon.svg
+    - assets/icons/apple_icon.svg
+    - assets/icons/x_icon.svg
+    # - assets/languages/
  
   fonts:
 

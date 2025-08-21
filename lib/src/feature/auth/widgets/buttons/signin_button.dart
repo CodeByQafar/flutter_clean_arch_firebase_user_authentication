@@ -12,7 +12,7 @@ class SignInButton extends StatelessWidget {
       child: Padding(
         padding: Paddings.signButtonPadding,
         child: Center(
-          child: Text(text, style: Theme.of(context).textTheme.titleMedium),
+          child: Text(text, style: Theme.of(context).textTheme.displayMedium),
         ),
       ),
     );

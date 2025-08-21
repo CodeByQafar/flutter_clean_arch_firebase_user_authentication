@@ -1,19 +1,19 @@
-import 'package:clean_arch_firebase_user_authentication/src/core/init/lang/languages.dart';
-import 'package:clean_arch_firebase_user_authentication/src/feature/auth/widgets/buttons/signwidht_icon_buttons.dart';
 
+import '../../../core/init/lang/languages.dart';
 import '../../../core/utility/duration.dart';
 import '../../../core/utility/border_radius.dart';
 import '../../../core/utility/padding.dart';
 import '../widgets/buttons/back_navigation_button.dart';
 import '../widgets/buttons/sign_button.dart';
+import '../widgets/buttons/sign_with_icon_buttons.dart';
 import '../widgets/check_box_list_tiles/checkbox_list_tile.dart';
 import '../widgets/containers/background_image.dart';
-import 'package:flutter/material.dart' hide Durations;
+import 'package:flutter/material.dart';
 
 import '../widgets/divider/divider_text.dart';
 import '../widgets/text_fields/password_text_field.dart';
 import '../widgets/text_fields/text_field.dart';
-import '../widgets/texts/custom_text_width_button.dart';
+import '../widgets/texts/custom_text_with_button.dart';
 import '../widgets/texts/sign_title.dart';
 
 class SignupView extends StatelessWidget {
@@ -70,8 +70,8 @@ class SignupView extends StatelessWidget {
                           SignWidthIcons(),
         
                           TextWidthButton(
-                            text: Language.alredyHaveAccount,
-                            buttonText: Language.signIn,
+                            text: Language.dontHaveAccount,
+                            buttonText: Language.signUp,
                             onPressed: () {},
                           ),
                         ],

@@ -79,8 +79,8 @@ class $AssetsIconsGen {
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
 
-  /// File path: assets/icons/x__icon.svg
-  String get xIcon => 'assets/icons/x__icon.svg';
+  /// File path: assets/icons/x_icon.svg
+  String get xIcon => 'assets/icons/x_icon.svg';
 
   /// List of all assets
   List<String> get values => [appleIcon, facebookIcon, googleIcon, xIcon];
@@ -89,12 +89,16 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/app_icon_backgoundles.png
+  AssetGenImage get appIconBackgoundles =>
+      const AssetGenImage('assets/images/app_icon_backgoundles.png');
+
   /// File path: assets/images/background.jpeg
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.jpeg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [background];
+  List<AssetGenImage> get values => [appIconBackgoundles, background];
 }
 
 class Assets {

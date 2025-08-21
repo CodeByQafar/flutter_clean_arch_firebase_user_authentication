@@ -18,30 +18,35 @@ class CustomCheckboxListTile extends StatefulWidget {
 
 class _CustomCheckboxListTileState extends State<CustomCheckboxListTile> {
   bool isChecked = true;
+   VisualDensity visualDensity= VisualDensity(vertical: -4, horizontal: -4);
+  void checkStatusChange() {
+    setState(() {
+      isChecked = !isChecked;
+    });
+    widget.onChanged.call(isChecked);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: Paddings.checkboxListTilePadding,
       child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Checkbox(
-
+            visualDensity: visualDensity,
             value: isChecked,
             checkColor: Colors.white,
             activeColor: AppColors.cyanBlueAzure,
-            onChanged: (value) {
-              setState(() {
-                isChecked = value ?? false;
-              });
-              widget.onChanged.call(value ?? false);
-            },
+            onChanged: (value) => checkStatusChange(),
           ),
-          Text(
-            widget.message,
-            style: Theme.of(context).textTheme.titleSmall,
+          InkWell(
+            onTap: () => checkStatusChange(),
+            child: Text(
+              widget.message,
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
           ),
         ],
       ),

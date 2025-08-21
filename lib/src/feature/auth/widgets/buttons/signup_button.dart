@@ -19,7 +19,7 @@ class SignUpButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+            style: Theme.of(context).textTheme.displayMedium?.copyWith(
               color: Theme.of(context).primaryColor,
             ),
           ),

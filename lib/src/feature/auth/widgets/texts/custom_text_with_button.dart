@@ -1,6 +1,8 @@
 import 'package:clean_arch_firebase_user_authentication/src/core/init/theme/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/utility/padding.dart';
+
 class TextWidthButton extends StatelessWidget {
   TextWidthButton({
     super.key,
@@ -14,7 +16,7 @@ class TextWidthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top:10,bottom: 50),
+      padding: Paddings.textWithButton,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

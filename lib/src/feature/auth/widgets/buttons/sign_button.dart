@@ -15,10 +15,8 @@ class SignButton extends StatelessWidget {
       child: ConstrainedBox(
         constraints: BoxConstraintses.expandSignButton,
         child: FilledButton(
-
           onPressed: onPressed,
           style: FilledButton.styleFrom(
-            elevation: 0.0,
             shape:BorderRadiuses.signBUttonRadius,
             backgroundColor: Theme.of(context).primaryColor,
           ),

@@ -10,17 +10,23 @@ class AppTheme {
     brightness: Brightness.light,
     appBarTheme: _appBarTheme(),
     textTheme: _texttheme(),
-
     hoverColor: Colors.transparent,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
-
     // buttonTheme: ButtonThemeData(
     //   hoverColor: Colors.transparent,
     //   splashColor: Colors.transparent,
     //   highlightColor: Colors.transparent,
     //   buttonColor: AppColors.cyanBlueAzure,
     // ),
+    textButtonTheme: TextButtonThemeData(style: ButtonStyle(
+      overlayColor:
+      WidgetStateProperty.resolveWith<Color?>(
+            (states) {
+          return Colors.transparent;
+        },
+      ),
+    ),),
     dividerColor: AppColors.quickSilver,
     colorScheme: ColorScheme.fromSwatch(
       primarySwatch: AppColors.cyanBlueAzure,
@@ -75,6 +81,14 @@ class AppTheme {
         color: Colors.white,
         fontFamily: FontFamily.agencyFb,
       ),
+
+      displayMedium:  TextStyle(
+        fontSize: 30.0,
+        fontFamily: FontFamily.smoochSans,
+        fontWeight: FontWeight.w700,
+        color: AppColors.cyanBlueAzure,
+      ),
     );
+
   }
 }
