@@ -1,5 +1,5 @@
 import '../../../core/init/lang/languages.dart';
-import '../../../core/router/router.dart';
+import '../../../core/router/navigation_manager.dart';
 import '../widgets/buttons/signin_button.dart';
 import '../widgets/buttons/signup_button.dart';
 import '../widgets/containers/background_image.dart';

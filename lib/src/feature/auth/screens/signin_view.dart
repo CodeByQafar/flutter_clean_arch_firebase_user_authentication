@@ -16,8 +16,8 @@ import '../widgets/text_fields/text_field.dart';
 import '../widgets/texts/custom_text_with_button.dart';
 import '../widgets/texts/sign_title.dart';
 
-class SigninView extends StatelessWidget {
-  const SigninView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {

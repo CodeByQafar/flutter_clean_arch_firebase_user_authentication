@@ -1,8 +1,13 @@
+import 'package:clean_arch_firebase_user_authentication/src/core/nanvigation/navigation_manager.dart';
+import 'package:clean_arch_firebase_user_authentication/src/feature/auth/screens/signin_view.dart';
+import 'package:clean_arch_firebase_user_authentication/src/feature/auth/screens/welcome_view.dart';
 import 'package:clean_arch_firebase_user_authentication/src/feature/home/home_view.dart';
 import 'package:clean_arch_firebase_user_authentication/src/core/init/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'src/feature/auth/screens/signup_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +24,8 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "wave",
+      routes:NavigationManager.routes,
+
       theme: AppTheme().theme,
       home: HomeView(),
     );
