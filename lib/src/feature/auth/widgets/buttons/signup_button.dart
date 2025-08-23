@@ -1,3 +1,4 @@
+import '../../../../core/init/theme/colors.dart';
 import '../../../../core/utility/border_radius.dart';
 import '../../../../core/utility/padding.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class SignUpButton extends StatelessWidget {
       child: Container(
         padding: Paddings.signButtonPadding,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.white,
           borderRadius: BorderRadiuses.signUpButtonRadius,
         ),
         child: Center(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  //main app color
+
+  AppColors._();
+ 
   static const MaterialColor cyanBlueAzure =
       MaterialColor(  0xff1592e6,
           <int, Color>{
@@ -30,4 +32,6 @@ class AppColors {
     800: Color(0xffA5A5A5),
     900: Color(0xffA5A5A5),
   });
+  static const Color cynicalBlack = Color(0xff171717);
+  static const Color white = Colors.white;
 }

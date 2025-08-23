@@ -1,5 +1,6 @@
+import 'package:clean_arch_firebase_user_authentication/src/core/nanvigation/navigation_manager.dart';
+
 import '../../../core/init/lang/languages.dart';
-import '../../../core/router/navigation_manager.dart';
 import '../widgets/buttons/signin_button.dart';
 import '../widgets/buttons/signup_button.dart';
 import '../widgets/containers/background_image.dart';
@@ -30,9 +31,7 @@ class WelcomeView extends StatelessWidget {
                 Expanded(
                   child: SignInButton(
                     onPressed: () {
-                      Navigator.of(
-                        context,
-                      ).push(AppRouter.generateRoute(RouteName.signin));
+                      NavigationManager.instance.pushToPage(RouteName.signIn);
                     },
                     text: Language.signIn,
                   ),
@@ -40,9 +39,7 @@ class WelcomeView extends StatelessWidget {
                 Expanded(
                   child: SignUpButton(
                     onPressed: () {
-                      Navigator.of(
-                        context,
-                      ).push(AppRouter.generateRoute(RouteName.signup));
+                      NavigationManager.instance.pushToPage(RouteName.signUp);
                     },
                     text: Language.signUp,
                   ),

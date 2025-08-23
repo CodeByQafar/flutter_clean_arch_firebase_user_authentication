@@ -1,3 +1,6 @@
+import 'package:clean_arch_firebase_user_authentication/src/core/nanvigation/navigation_manager.dart';
+
+import '../../../../core/init/theme/colors.dart';
 import '../../../../core/utility/padding.dart';
 import '../../../../core/init/lang/languages.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,11 +12,11 @@ class BackNavigationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.of(context).pop(),
+      onTap: () => NavigationManager.instance.popPage(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(CupertinoIcons.back, color: Colors.white),
+          Icon(CupertinoIcons.back, color: AppColors.white),
           Padding(
             padding: Paddings.backTextPadding,
             child: Text(

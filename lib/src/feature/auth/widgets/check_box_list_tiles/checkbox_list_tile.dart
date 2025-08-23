@@ -37,7 +37,7 @@ class _CustomCheckboxListTileState extends State<CustomCheckboxListTile> {
           Checkbox(
             visualDensity: visualDensity,
             value: isChecked,
-            checkColor: Colors.white,
+            checkColor: AppColors.white,
             activeColor: AppColors.cyanBlueAzure,
             onChanged: (value) => checkStatusChange(),
           ),

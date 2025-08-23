@@ -37,7 +37,7 @@ class SignUpView extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).scaffoldBackgroundColor,
                   borderRadius: BorderRadiuses.backgroundContainerRadius,
                 ),
                 child: Column(

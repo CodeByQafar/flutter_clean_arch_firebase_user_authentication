@@ -22,12 +22,14 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: RouteGenerator.generateRoute,
+      key: NavigationManager.instance.navigationGlobalKey,
       debugShowCheckedModeBanner: false,
-      title: "wave",
-      routes:NavigationManager.routes,
-
-      theme: AppTheme().theme,
+      darkTheme: AppTheme().darkTheme,
+      theme: AppTheme().lightTheme,
+      themeMode: ThemeMode.light,
       home: HomeView(),
+      title: "wave",
     );
   }
 }

@@ -3,35 +3,50 @@ import 'package:flutter/material.dart';
 import '../../../../gen/fonts.gen.dart';
 
 class AppTheme {
-  ThemeData get theme => ThemeData(
+  ThemeData get lightTheme => ThemeData(
     primaryColor: AppColors.cyanBlueAzure,
     primarySwatch: AppColors.cyanBlueAzure,
-
-    brightness: Brightness.light,
+    scaffoldBackgroundColor: AppColors.white,
     appBarTheme: _appBarTheme(),
     textTheme: _texttheme(),
     hoverColor: Colors.transparent,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
-    // buttonTheme: ButtonThemeData(
-    //   hoverColor: Colors.transparent,
-    //   splashColor: Colors.transparent,
-    //   highlightColor: Colors.transparent,
-    //   buttonColor: AppColors.cyanBlueAzure,
-    // ),
-    textButtonTheme: TextButtonThemeData(style: ButtonStyle(
-      overlayColor:
-      WidgetStateProperty.resolveWith<Color?>(
-            (states) {
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
           return Colors.transparent;
-        },
+        }),
       ),
-    ),),
+    ),
     dividerColor: AppColors.quickSilver,
     colorScheme: ColorScheme.fromSwatch(
       primarySwatch: AppColors.cyanBlueAzure,
     ).copyWith(onSecondary: AppColors.quickSilver),
-    iconTheme: IconThemeData(color: Colors.white),
+    iconTheme: IconThemeData(color: AppColors.white),
+  );
+
+  ThemeData get darkTheme => ThemeData(
+    primaryColor: AppColors.cyanBlueAzure,
+    primarySwatch: AppColors.cyanBlueAzure,
+    scaffoldBackgroundColor: AppColors.cynicalBlack,
+    appBarTheme: _appBarTheme(),
+    textTheme: _texttheme(),
+    hoverColor: Colors.transparent,
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+          return Colors.transparent;
+        }),
+      ),
+    ),
+    dividerColor: AppColors.quickSilver,
+    colorScheme: ColorScheme.fromSwatch(
+      primarySwatch: AppColors.cyanBlueAzure,
+    ).copyWith(onSecondary: AppColors.quickSilver),
+    iconTheme: IconThemeData(color: AppColors.white),
   );
 
   AppBarTheme _appBarTheme() {
@@ -41,7 +56,7 @@ class AppTheme {
       titleTextStyle: TextStyle(
         fontWeight: FontWeight.w700,
         fontSize: 20.0,
-        color: Colors.white,
+        color: AppColors.white,
       ),
     );
   }
@@ -50,7 +65,7 @@ class AppTheme {
     return TextTheme(
       titleLarge: TextStyle(
         fontSize: 88.0,
-        color: Colors.white,
+        color: AppColors.white,
         fontFamily: FontFamily.bebasNeue,
       ),
       titleMedium: TextStyle(
@@ -69,7 +84,7 @@ class AppTheme {
         fontSize: 30.0,
         fontFamily: FontFamily.smoochSans,
         fontWeight: FontWeight.w700,
-        color: Colors.white,
+        color: AppColors.white,
       ),
       bodyMedium: TextStyle(
         fontSize: 22.0,
@@ -78,17 +93,16 @@ class AppTheme {
       ),
       bodySmall: TextStyle(
         fontSize: 20.0,
-        color: Colors.white,
+        color: AppColors.white,
         fontFamily: FontFamily.agencyFb,
       ),
 
-      displayMedium:  TextStyle(
+      displayMedium: TextStyle(
         fontSize: 30.0,
         fontFamily: FontFamily.smoochSans,
         fontWeight: FontWeight.w700,
         color: AppColors.cyanBlueAzure,
       ),
     );
-
   }
 }
