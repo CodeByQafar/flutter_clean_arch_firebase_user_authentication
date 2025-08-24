@@ -1,5 +1,5 @@
 import '../../../../core/init/lang/languages.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 import 'package:flutter/material.dart';
 
 class SubtitleText extends StatelessWidget {

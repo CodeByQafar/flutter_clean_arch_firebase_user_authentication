@@ -1,6 +1,6 @@
 import '../../../../core/init/theme/colors.dart';
-import '../../../../core/utility/border_radius.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/border_radius.dart';
+import '../../../../core/utils/padding.dart';
 import 'package:flutter/material.dart';
 
 class SignUpButton extends StatelessWidget {

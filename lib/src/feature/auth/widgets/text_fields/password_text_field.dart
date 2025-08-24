@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart' hide Durations;
 
-import '../../../../core/utility/duration.dart';
-import '../../../../core/utility/border_radius.dart';
-import '../../../../core/utility/icon_size.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/duration.dart';
+import '../../../../core/utils/border_radius.dart';
+import '../../../../core/utils/icon_size.dart';
+import '../../../../core/utils/padding.dart';
 
 class CustomPasswordTextField extends StatefulWidget {
   const CustomPasswordTextField({super.key, required this.hintText});

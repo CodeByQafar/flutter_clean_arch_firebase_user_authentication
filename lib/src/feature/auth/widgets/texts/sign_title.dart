@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 
 class SignTitleText extends StatelessWidget {
   const SignTitleText({super.key, required this.text});

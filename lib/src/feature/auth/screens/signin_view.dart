@@ -1,7 +1,8 @@
 import '../../../core/init/lang/languages.dart';
 import '../../../core/init/theme/colors.dart';
-import '../../../core/utility/border_radius.dart';
-import '../../../core/utility/padding.dart';
+
+import '../../../core/utils/border_radius.dart';
+import '../../../core/utils/padding.dart';
 import '../widgets/buttons/back_navigation_button.dart';
 import '../widgets/buttons/sign_button.dart';
 import '../widgets/buttons/sign_with_icon_buttons.dart';

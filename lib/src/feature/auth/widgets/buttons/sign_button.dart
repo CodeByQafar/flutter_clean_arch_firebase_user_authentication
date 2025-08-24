@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utility/border_radius.dart';
-import '../../../../core/utility/box_constraints.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/border_radius.dart';
+import '../../../../core/utils/box_constraints.dart';
+import '../../../../core/utils/padding.dart';
 
 class SignButton extends StatelessWidget {
   const SignButton({super.key, required this.message, required this.onPressed});

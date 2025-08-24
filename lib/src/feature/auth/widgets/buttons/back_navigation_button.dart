@@ -1,7 +1,7 @@
 
 import '../../../../core/init/theme/colors.dart';
 import '../../../../core/mixins/navigation_mixin.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 import '../../../../core/init/lang/languages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

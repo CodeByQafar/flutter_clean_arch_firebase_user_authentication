@@ -1,10 +1,10 @@
-import 'package:clean_arch_firebase_user_authentication/src/core/utility/icon_size.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../gen/assets.gen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/utility/box_constraints.dart';
+import '../../../../core/utils/box_constraints.dart';
+import '../../../../core/utils/icon_size.dart';
 
 class SignWidthIcons extends StatelessWidget {
   const SignWidthIcons({super.key});

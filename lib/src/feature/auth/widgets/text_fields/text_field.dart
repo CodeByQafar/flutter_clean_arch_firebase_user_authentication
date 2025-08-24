@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' hide Durations;
 
-import '../../../../core/utility/duration.dart';
-import '../../../../core/utility/border_radius.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/duration.dart';
+import '../../../../core/utils/border_radius.dart';
+import '../../../../core/utils/padding.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({

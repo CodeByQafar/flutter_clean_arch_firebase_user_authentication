@@ -1,4 +1,4 @@
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 import 'package:flutter/material.dart';
 
 class SignInButton extends StatelessWidget {

@@ -5,7 +5,7 @@ import '../widgets/buttons/signin_button.dart';
 import '../widgets/buttons/signup_button.dart';
 import '../widgets/containers/background_image.dart';
 import '../widgets/texts/subtitle_text.dart';
-import '../../../core/utility/padding.dart';
+import '../../../core/utils/padding.dart';
 import '../widgets/texts/title_text.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/init/theme/colors.dart';
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 
 class CustomCheckboxListTile extends StatefulWidget {
   const CustomCheckboxListTile({

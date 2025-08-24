@@ -1,7 +1,7 @@
 import 'package:clean_arch_firebase_user_authentication/src/core/init/theme/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 
 class TextWidthButton extends StatelessWidget {
   const TextWidthButton({

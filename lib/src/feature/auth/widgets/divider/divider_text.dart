@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/utility/padding.dart';
+import '../../../../core/utils/padding.dart';
 
 class DividerText extends StatelessWidget {
   const DividerText({
