@@ -1,6 +1,6 @@
-import 'package:clean_arch_firebase_user_authentication/src/core/nanvigation/navigation_manager.dart';
-
 import '../../../core/init/lang/languages.dart';
+import '../../../core/mixins/navigation_mixin.dart';
+import '../../../core/navigation/navigation_manager.dart';
 import '../widgets/buttons/signin_button.dart';
 import '../widgets/buttons/signup_button.dart';
 import '../widgets/containers/background_image.dart';
@@ -9,8 +9,8 @@ import '../../../core/utility/padding.dart';
 import '../widgets/texts/title_text.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeView extends StatelessWidget {
-  const WelcomeView({super.key});
+class WelcomeView extends StatelessWidget with NavigatornMixinStateless{
+   WelcomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class WelcomeView extends StatelessWidget {
                 Expanded(
                   child: SignInButton(
                     onPressed: () {
-                      NavigationManager.instance.pushToPage(RouteName.signIn);
+                     router.pushToPage(RouteName.signIn);
                     },
                     text: Language.signIn,
                   ),
@@ -39,7 +39,7 @@ class WelcomeView extends StatelessWidget {
                 Expanded(
                   child: SignUpButton(
                     onPressed: () {
-                      NavigationManager.instance.pushToPage(RouteName.signUp);
+                   router.pushToPage(RouteName.signUp);
                     },
                     text: Language.signUp,
                   ),

@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/utility/box_constraints.dart';
 
 class SignWidthIcons extends StatelessWidget {
-  SignWidthIcons({super.key});
+  const SignWidthIcons({super.key});
 
   @override
   Widget build(BuildContext context) {

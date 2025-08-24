@@ -1,6 +1,5 @@
 import '../../../core/init/lang/languages.dart';
 import '../../../core/init/theme/colors.dart';
-import '../../../core/utility/duration.dart';
 import '../../../core/utility/border_radius.dart';
 import '../../../core/utility/padding.dart';
 import '../widgets/buttons/back_navigation_button.dart';
@@ -22,9 +21,8 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
       extendBodyBehindAppBar: true,
-
+      extendBody: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: BackNavigationButton(),

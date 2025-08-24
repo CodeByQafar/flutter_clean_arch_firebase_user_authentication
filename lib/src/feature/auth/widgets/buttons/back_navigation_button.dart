@@ -1,18 +1,18 @@
-import 'package:clean_arch_firebase_user_authentication/src/core/nanvigation/navigation_manager.dart';
 
 import '../../../../core/init/theme/colors.dart';
+import '../../../../core/mixins/navigation_mixin.dart';
 import '../../../../core/utility/padding.dart';
 import '../../../../core/init/lang/languages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BackNavigationButton extends StatelessWidget {
+class BackNavigationButton extends StatelessWidget with NavigatornMixinStateless {
   const BackNavigationButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => NavigationManager.instance.popPage(),
+      onTap: () => router.popPage(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [

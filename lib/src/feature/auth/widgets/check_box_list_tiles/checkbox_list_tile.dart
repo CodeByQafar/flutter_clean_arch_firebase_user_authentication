@@ -4,7 +4,7 @@ import '../../../../core/init/theme/colors.dart';
 import '../../../../core/utility/padding.dart';
 
 class CustomCheckboxListTile extends StatefulWidget {
-  CustomCheckboxListTile({
+  const CustomCheckboxListTile({
     super.key,
     required this.message,
     required this.onChanged,
